@@ -38,7 +38,6 @@ export const EditContactForm = ({
       number: editedNumber,
       id,
     };
-    console.log(updatedContact);
     onEditSubmit(updatedContact);
     reset();
     onClose();

@@ -19,5 +19,3 @@ export const UserMenu = () => {
     </div>
   );
 };
-
-// onClick = {() => dispatch(logOut())}

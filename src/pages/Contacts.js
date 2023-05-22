@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-import { Toaster } from 'react-hot-toast';
 import { selectFilter } from '../redux/filter/filterSlice';
 import { AddContactForm } from '../components/AddContactForm/AddContactForm';
 import { ContactList } from '../components/ContactList/ContactList';
@@ -28,7 +27,7 @@ const Contacts = () => {
   return (
     <div className={css.container}>
       <h1>Phonebook</h1>
-      <AddContactForm contacts={visibleContacts} />
+      <AddContactForm contacts={contacts} />
 
       <h2>Contacts</h2>
       <Filter />
@@ -40,12 +39,6 @@ const Contacts = () => {
         !isFetching && <p className="list-is-empty">No contacts</p>
       )}
       {isError && <p>Something going wrong, please refresh page</p>}
-      <Toaster
-        position="top-center"
-        toastOptions={{
-          duration: 1000,
-        }}
-      />
     </div>
   );
 };
