@@ -6,4 +6,19 @@
 
 .username {
   font-weight: 700;
+  font-size: 25px;
+}
+
+.wrapper button {
+  display: flex;
+  border-radius: 5px;
+  background-color: #3f51b5;
+  border: none;
+  padding: 10px 25px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.wrapper button:hover {
+  background-color: #243380;
 }

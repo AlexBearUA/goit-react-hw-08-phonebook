@@ -7,6 +7,7 @@ import {
   useDeleteContactMutation,
   useUpdateContactMutation,
 } from '../../redux/contacts/contactsAPI';
+import { BiPencil, BiTrash } from 'react-icons/bi';
 import css from './ContactListItem.module.css';
 import PropTypes from 'prop-types';
 
@@ -45,17 +46,21 @@ export const ContactListItem = ({ name, number, id }) => {
   return (
     <>
       <p>
-        {name}: {number}
+        <span>{name}</span>
+        <span>{number}</span>
       </p>
       <div className={css.ItemButtons}>
         <button onClick={toggleModal} disabled={isUpdating}>
           {isUpdating ? (
-            <>
+            <div className={css.BtnContent}>
               <ButtonLoader />
               <span>Editing...</span>
-            </>
+            </div>
           ) : (
-            <span>Edit</span>
+            <div className={css.BtnContent}>
+              <BiPencil />
+              <span>Edit</span>
+            </div>
           )}
         </button>
         <button
@@ -65,12 +70,15 @@ export const ContactListItem = ({ name, number, id }) => {
           disabled={isDeleting}
         >
           {isDeleting ? (
-            <>
+            <div className={css.BtnContent}>
               <ButtonLoader />
               <span>Deleting...</span>
-            </>
+            </div>
           ) : (
-            <span>Delete</span>
+            <div className={css.BtnContent}>
+              <BiTrash />
+              <span>Delete</span>
+            </div>
           )}
         </button>
       </div>

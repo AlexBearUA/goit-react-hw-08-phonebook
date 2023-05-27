@@ -1,6 +1,6 @@
 import { Navigation } from '../Navigation/Navigation';
 import { UserMenu } from '../UserMenu/UserMenu';
-import { AuthNav } from '../AuthNav/AuthNav';
+import { AuthNav } from '../Navigation/AuthNav';
 import { useAuth } from '../../hooks/userAuth';
 import css from './AppBar.module.css';
 

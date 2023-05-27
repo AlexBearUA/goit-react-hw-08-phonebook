@@ -1,3 +1,9 @@
+p span:first-child {
+  display: inline-block;
+  width: 300px;
+  margin-right: 15px;
+}
+
 .ItemButtons {
   margin-left: auto;
   display: flex;
@@ -5,17 +11,19 @@
 }
 
 .ItemButtons button {
-  max-width: 100%;
+  cursor: pointer;
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: #3f51b5;
+  border: none;
+}
+
+.BtnContent {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5px;
-  cursor: pointer;
-  border-radius: 5px;
-  padding: 5px 15px;
-  margin-left: auto;
 }
-
 .ItemButtons button:hover {
-  background-color: antiquewhite;
+  background-color: #243380;
 }

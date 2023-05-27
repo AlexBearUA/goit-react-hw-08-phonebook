@@ -13,7 +13,12 @@ export const Filter = () => {
   return (
     <label className={css.Filter}>
       <p>Find contacts by name</p>
-      <input type="text" value={filter} onChange={changeFilter}></input>
+      <input
+        placeholder="Enter search name..."
+        type="text"
+        value={filter}
+        onChange={changeFilter}
+      ></input>
     </label>
   );
 };

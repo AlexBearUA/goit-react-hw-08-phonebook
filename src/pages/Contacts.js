@@ -26,7 +26,7 @@ const Contacts = () => {
 
   return (
     <div className={css.container}>
-      <h1>Phonebook</h1>
+      <h2>Wellcome to your phonebook</h2>
       <AddContactForm contacts={contacts} />
 
       <h2>Contacts</h2>

@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: hsl(231, 48%, 48%, 0.2);
 }
 
 code {
@@ -48,5 +49,53 @@ img {
   top: 50%;
   right: 50%;
   translate: 50% -50%;
-  color: grey;
+  color: #3f51b5;
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 25px;
+  padding: 12px;
+  font-weight: 700;
+  color: #2a363b;
+  margin-right: 20px;
+}
+
+.link:hover {
+  color: #3f51b5;
+}
+
+.active {
+  color: #3f51b5;
+}
+
+.active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+
+  border-radius: 2px;
+  background-color: #3f51b5;
+
+  animation-name: current-underline;
+  animation-duration: 150ms;
+  animation-timing-function: linear;
+}
+
+@keyframes current-underline {
+  0% {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(0.5);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }
